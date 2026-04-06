@@ -1,0 +1,164 @@
+/* Jason McDaniel Portfolio (SIP311)
+   Lightweight CSS for GitHub Pages
+*/
+
+:root{
+  --bg:#0f1720;
+  --panel:#111e25;
+  --text:#eaf1f6;
+  --muted:#a9bac6;
+  --accent:#7ed0e5;
+  --line:rgba(126,208,229,.18);
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+  --radius:16px;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  background:radial-gradient(1200px 800px at 15% 10%, rgba(126,208,229,.14), transparent 55%),
+             radial-gradient(900px 600px at 85% 20%, rgba(133,150,161,.16), transparent 55%),
+             var(--bg);
+  color:var(--text);
+  line-height:1.55;
+}
+
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+.container{max-width:1050px;margin:0 auto;padding:22px}
+
+.topbar{
+  position:sticky;top:0;z-index:20;
+  background:rgba(15,23,32,.82);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+.nav{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:12px;
+}
+
+.brand{
+  display:flex;flex-direction:column;gap:2px;
+}
+.brand .name{font-weight:800;letter-spacing:.2px}
+.brand .sub{font-size:.88rem;color:var(--muted)}
+
+.navlinks{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:flex-end}
+.navlinks a{
+  padding:8px 10px;border-radius:999px;
+  border:1px solid transparent;
+  color:var(--text);
+  font-weight:600;
+  font-size:.95rem;
+}
+.navlinks a:hover{border-color:rgba(126,208,229,.35)}
+.navlinks a.active{
+  background:rgba(126,208,229,.12);
+  border-color:rgba(126,208,229,.45);
+}
+
+.hero{
+  padding:34px 0 18px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(12, 1fr);
+  gap:18px;
+}
+
+.card{
+  grid-column:span 12;
+  background:linear-gradient(180deg, rgba(17,30,37,.88), rgba(17,30,37,.72));
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:18px;
+}
+
+@media (min-width: 900px){
+  .card.span-7{grid-column:span 7}
+  .card.span-5{grid-column:span 5}
+  .card.span-6{grid-column:span 6}
+}
+
+.h1{font-size:2.05rem;line-height:1.15;margin:0 0 8px}
+.h2{font-size:1.35rem;margin:0 0 10px}
+.p{margin:0 0 10px;color:var(--muted)}
+
+.kicker{
+  display:inline-flex;gap:8px;align-items:center;
+  padding:6px 10px;border-radius:999px;
+  background:rgba(126,208,229,.10);
+  border:1px solid rgba(126,208,229,.25);
+  color:var(--text);
+  font-size:.92rem;
+  font-weight:700;
+}
+
+.btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:10px 12px;border-radius:12px;
+  border:1px solid rgba(126,208,229,.35);
+  background:rgba(126,208,229,.10);
+  color:var(--text);
+  font-weight:800;
+}
+.btn:hover{background:rgba(126,208,229,.16);text-decoration:none}
+.btn.secondary{border-color:rgba(255,255,255,.12);background:rgba(255,255,255,.05)}
+
+.list{margin:10px 0 0;padding-left:18px;color:var(--muted)}
+.list li{margin:6px 0}
+
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.badge{
+  padding:6px 10px;border-radius:999px;
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.05);
+  font-weight:700;
+  font-size:.88rem;
+  color:var(--text);
+}
+
+.hr{height:1px;background:rgba(255,255,255,.08);margin:16px 0}
+
+.footer{
+  margin-top:26px;
+  padding:20px 0 40px;
+  color:var(--muted);
+  border-top:1px solid rgba(255,255,255,.08);
+  font-size:.95rem;
+}
+
+.small{font-size:.92rem;color:var(--muted)}
+
+.codebox{
+  margin-top:10px;
+  padding:12px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(0,0,0,.20);
+  overflow:auto;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:.92rem;
+}
+
+.imgwrap{
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.03);
+  padding:12px;
+}
+
+.note{
+  border-left:4px solid rgba(126,208,229,.6);
+  padding:10px 12px;
+  border-radius:10px;
+  background:rgba(126,208,229,.08);
+  color:var(--muted);
+}
