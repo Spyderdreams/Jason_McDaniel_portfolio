@@ -1,0 +1,10 @@
+title: Jason McDaniel | SIP311 Portfolio
+description: UAT SIP311 portfolio site for Jason McDaniel
+remote_theme: pages-themes/minimal@v0.2.0
+plugins:
+  - jekyll-remote-theme
+
+show_downloads: false
+
+# Navigation links (used by this theme in the header)
+
